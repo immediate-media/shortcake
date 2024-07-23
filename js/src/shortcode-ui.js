@@ -49,6 +49,13 @@ $(document).ready(function(){
 			frame = wp.media.editor.open( editor, options );
 		}
 
+		// Fix for multiple image loading
+		frame.uploader.uploader.uploader.setOption(
+			'runtimes',
+			frame.uploader.uploader.uploader.getOption('runtimes'),
+			false
+		);
+
 		// Make sure to reset state when closed.
 		frame.once( 'close submit', function() {
 			frame.mediaController.reset();

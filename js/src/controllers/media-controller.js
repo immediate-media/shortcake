@@ -72,7 +72,6 @@ var MediaController = wp.media.controller.State.extend({
 		}
 
 		this.frame.setState( 'insert' );
-		this.frame.uploader.uploader.uploader.init();
 	},
 
 	setActionSelect: function() {
